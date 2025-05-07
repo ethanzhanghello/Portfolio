@@ -1,5 +1,6 @@
 'use client'
 import { motion } from 'framer-motion'
+import Image from 'next/image'
 
 const navLinks = [
   { name: 'Experience', href: '#about' },
@@ -73,7 +74,7 @@ export default function Home() {
         {/* Left: Large Profile Picture */}
         <div className="flex-shrink-0 flex flex-col items-center">
           <div className="w-72 h-72 md:w-96 md:h-96 rounded-3xl overflow-hidden shadow-2xl border-8 border-blue-700 bg-blue-900 flex items-center justify-center mb-6">
-            <img src="/profile.jpg" alt="Ethan Zhang profile" className="object-cover w-full h-full" />
+            <Image src="/profile.jpg" alt="Ethan Zhang profile" width={384} height={384} className="object-cover w-full h-full" />
           </div>
         </div>
         {/* Right: Name, Title, Summary */}
@@ -84,11 +85,11 @@ export default function Home() {
           className="max-w-2xl text-left"
         >
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
-            I'm <span className="text-blue-400">Ethan Zhang</span>.<br />
-            <span className="text-4xl md:text-5xl font-bold text-blue-200">Data Analyst & Developer</span>
+            I&apos;m <span className="text-blue-400">Ethan Zhang</span>.<br />
+            <span className="text-4xl md:text-5xl font-bold text-blue-200">Data Analyst &amp; Developer</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
-            UC Berkeley student majoring in Computer Science & Applied Math. Passionate about leveraging data to drive impactful decisions, with hands-on experience in data analysis, machine learning, and software development. Seeking data analyst opportunities to apply my technical expertise and curiosity to solve real-world problems.
+            UC Berkeley student majoring in Computer Science &amp; Applied Math. Passionate about leveraging data to drive impactful decisions, with hands-on experience in data analysis, machine learning, and software development. Seeking data analyst opportunities to apply my technical expertise and curiosity to solve real-world problems.
           </p>
           <div className="flex gap-6 mt-4">
             <a href="#projects" className="px-8 py-3 bg-blue-500 text-white rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 transition-colors">View Projects</a>
@@ -110,7 +111,7 @@ export default function Home() {
           >
             <h2 className="text-3xl font-bold mb-2 text-blue-300">About Me</h2>
             <p className="text-lg text-blue-100">
-              Hi! I'm Ethan, a passionate data analyst and developer currently studying Computer Science and Applied Math at UC Berkeley. I thrive on solving complex problems and transforming data into actionable insights. My interests include data science, machine learning, and building tools that make a difference. I love collaborating with others and am always eager to learn something new.
+              Hi! I&apos;m Ethan, a passionate data analyst and developer currently studying Computer Science and Applied Math at UC Berkeley. I thrive on solving complex problems and transforming data into actionable insights. My interests include data science, machine learning, and building tools that make a difference. I love collaborating with others and am always eager to learn something new.
             </p>
             <ul className="list-disc list-inside text-blue-200 text-base mt-2">
               <li>Driven by curiosity and a love for data</li>
