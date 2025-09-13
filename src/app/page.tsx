@@ -121,11 +121,9 @@ export default function Home() {
                 <span className="text-blue-400 font-medium">August 2025 - Present</span>
               </div>
               <p className="text-blue-200 font-medium mb-3">Business & Software at Berkeley — Client: Google | Mountain View, CA</p>
-              <ul className="list-disc list-inside text-blue-100 space-y-2">
-                <li>Developed backend dashboard for Google Cloud PMs to track idle resources across 50+ projects, reducing infrastructure waste by ~18%</li>
-                <li>Engineered data aggregation and filtering pipelines using Python, Firebase, and Cloud Functions; exposed RESTful APIs for efficient data retrieval</li>
-                <li>Collaborated with Google PMs to translate feature requirements into testable backend modules, delivering 6+ MVPs across 4 agile sprints with CI/CD, 90% test coverage</li>
-              </ul>
+              <p className="text-blue-100 leading-relaxed">
+                Working directly with Google Cloud Product Managers, I developed a comprehensive backend dashboard that monitors idle resources across 50+ projects, successfully reducing infrastructure waste by 18%. The solution involved building sophisticated data aggregation and filtering pipelines using Python, Firebase, and Cloud Functions, with RESTful APIs enabling efficient data retrieval. Through close collaboration with Google PMs, I translated complex feature requirements into robust, testable backend modules, delivering 6+ MVPs across 4 agile sprints while maintaining 90% test coverage and implementing full CI/CD practices.
+              </p>
             </motion.div>
 
             {/* Oratora Experience */}
@@ -141,11 +139,9 @@ export default function Home() {
                 <span className="text-blue-400 font-medium">July 2025 - Present</span>
               </div>
               <p className="text-blue-200 font-medium mb-3">Oratora | Berkeley, CA</p>
-              <ul className="list-disc list-inside text-blue-100 space-y-2">
-                <li>Built keystroke-based cheat detection system using behavioral telemetry to identify AI-assisted and copy-paste behavior</li>
-                <li>Engineered feature pipeline (30+ signals) from keystroke data; found entropy/paste-ratio patterns in 92% of cheating cases</li>
-                <li>Deployed FastAPI inference API (&lt;100ms latency) with SHAP-based explainability; achieved 91% precision on validation</li>
-              </ul>
+              <p className="text-blue-100 leading-relaxed">
+                I designed and built an innovative keystroke-based cheat detection system that uses behavioral telemetry to identify AI-assisted and copy-paste behavior in real-time. The system processes 30+ behavioral signals from keystroke data, successfully identifying entropy and paste-ratio patterns in 92% of cheating cases. I deployed a high-performance FastAPI inference API with sub-100ms latency and integrated SHAP-based explainability features, achieving 91% precision on validation datasets.
+              </p>
             </motion.div>
 
             {/* Lumo Experience */}
@@ -161,11 +157,9 @@ export default function Home() {
                 <span className="text-blue-400 font-medium">March 2025 - Present</span>
               </div>
               <p className="text-blue-200 font-medium mb-3">Lumo | Berkeley, CA</p>
-              <ul className="list-disc list-inside text-blue-100 space-y-2">
-                <li>Shipped AI grocery app used by 800+ beta testers; reduced average in-store time by 23% with personalized meal planning</li>
-                <li>Integrated GPT-4 assistant for real-time suggestions, nutrition tracking, and conversational shopping features</li>
-                <li>Architected modular system with GitHub Actions CI/CD and high test coverage, enabling parallel dev across cart, chatbot, and calendar modules</li>
-              </ul>
+              <p className="text-blue-100 leading-relaxed">
+                As Lead Software Engineer, I successfully launched an AI-powered grocery application that serves 800+ beta testers and reduced average in-store shopping time by 23% through personalized meal planning. I integrated GPT-4 assistant capabilities to provide real-time suggestions, nutrition tracking, and conversational shopping features. The entire system was architected with a modular approach, implementing GitHub Actions CI/CD and maintaining high test coverage, which enabled parallel development across cart, chatbot, and calendar modules.
+              </p>
             </motion.div>
 
             {/* Law Office Experience */}
@@ -181,12 +175,9 @@ export default function Home() {
                 <span className="text-blue-400 font-medium">May 2025 - July 2025</span>
               </div>
               <p className="text-blue-200 font-medium mb-3">Law Offices of Vaughan de Kirby A.P.C. | San Francisco, CA</p>
-              <ul className="list-disc list-inside text-blue-100 space-y-2">
-                <li>Built full-stack bilingual platform with green card screener, RAG-based multilingual chatbot, and predictive case tracker</li>
-                <li>Created multilingual React screener and RAG chatbot (LangChain, ChromaDB); enabled 1,000+ self-service screenings</li>
-                <li>Constructed visa case tracker with ETA engine (MAE: 4.6 days); improved update accuracy and cut inquiry tickets by 30%</li>
-                <li>Assembled Flask backend with Firebase, MongoDB, and JWT auth; deployed to Vercel/Render with accessibility-first UI</li>
-              </ul>
+              <p className="text-blue-100 leading-relaxed">
+                I developed a comprehensive full-stack bilingual platform featuring a green card screener, RAG-based multilingual chatbot, and predictive case tracker. The solution included a multilingual React screener and RAG chatbot built with LangChain and ChromaDB, enabling over 1,000 self-service screenings. I also constructed a sophisticated visa case tracker with an ETA engine that achieved a Mean Absolute Error of 4.6 days, improving update accuracy and reducing inquiry tickets by 30%. The entire system was built with a Flask backend integrated with Firebase, MongoDB, and JWT authentication, and deployed to Vercel/Render with an accessibility-first user interface.
+              </p>
             </motion.div>
           </div>
         </div>
