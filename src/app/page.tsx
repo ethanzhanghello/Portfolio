@@ -334,7 +334,7 @@ export default function Home() {
               <span>✉️ <a href="mailto:ezhang06@berkeley.edu" className="hover:underline text-blue-200">ezhang06@berkeley.edu</a></span>
             </div>
             <div className="flex gap-6">
-              <a href="https://linkedin.com/in/ethan-zhang" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-200 transition-colors">
+              <a href="https://www.linkedin.com/in/ethan-zhang-693100270/" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-200 transition-colors">
                 LinkedIn
               </a>
               <a href="https://github.com/ethanzhanghello" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-200 transition-colors">
