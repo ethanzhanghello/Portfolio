@@ -122,7 +122,7 @@ export default function Home() {
               </div>
               <p className="text-blue-200 font-medium mb-3">Business & Software at Berkeley — Client: Google | Mountain View, CA</p>
               <p className="text-blue-100 leading-relaxed">
-                Working directly with Google Cloud Product Managers, I developed a comprehensive backend dashboard that monitors idle resources across 50+ projects, successfully reducing infrastructure waste by 18%. The solution involved building sophisticated data aggregation and filtering pipelines using Python, Firebase, and Cloud Functions, with RESTful APIs enabling efficient data retrieval. Through close collaboration with Google PMs, I translated complex feature requirements into robust, testable backend modules, delivering 6+ MVPs across 4 agile sprints while maintaining 90% test coverage and implementing full CI/CD practices.
+                Built benchmarking pipelines for agentic AI systems, coding harnesses in Python/Firebase to stress-test 20+ tools for latency, scalability, and fault tolerance; reduced manual validation effort 25%. Engineered real-time monitoring system for Google Cloud PMs, aggregating data across 50+ projects to track 10K+ resources; optimized queries cut infrastructure waste ~18% and improved visibility. Implemented high-throughput REST APIs and backend modules in Python/Firebase Cloud Functions, processing 10K+ weekly requests; optimized response times to sub-200ms with CI/CD pipelines and 90% unit test coverage.
               </p>
             </motion.div>
 
