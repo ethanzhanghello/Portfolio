@@ -122,7 +122,7 @@ export default function Home() {
               </div>
               <p className="text-blue-200 font-medium mb-3">Business & Software at Berkeley — Client: Google | Mountain View, CA</p>
               <p className="text-blue-100 leading-relaxed">
-                Built benchmarking pipelines for agentic AI systems, coding harnesses in Python/Firebase to stress-test 20+ tools for latency, scalability, and fault tolerance; reduced manual validation effort 25%. Engineered real-time monitoring system for Google Cloud PMs, aggregating data across 50+ projects to track 10K+ resources; optimized queries cut infrastructure waste ~18% and improved visibility. Implemented high-throughput REST APIs and backend modules in Python/Firebase Cloud Functions, processing 10K+ weekly requests; optimized response times to sub-200ms with CI/CD pipelines and 90% unit test coverage.
+                I developed comprehensive benchmarking pipelines for agentic AI systems, creating sophisticated harnesses in Python and Firebase to stress-test over 20 tools for latency, scalability, and fault tolerance, which reduced manual validation effort by 25%. Working closely with Google Cloud Product Managers, I engineered a real-time monitoring system that aggregates data across 50+ projects to track over 10,000 resources, with optimized queries cutting infrastructure waste by 18% and significantly improving visibility. I also implemented high-throughput REST APIs and backend modules using Python and Firebase Cloud Functions, processing over 10,000 weekly requests with response times optimized to sub-200ms, all while maintaining 90% unit test coverage and robust CI/CD pipelines.
               </p>
             </motion.div>
 
