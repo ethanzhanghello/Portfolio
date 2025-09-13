@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Portfolio | Your Name",
-  description: "Personal portfolio showcasing my work and experience",
+  title: "Ethan Zhang | Software Engineer",
+  description: "Software Engineer specializing in full-stack development, cloud technologies, and distributed systems. UC Berkeley Computer Science & Applied Mathematics student with experience at Google, Oratora, and Lumo.",
 };
 
 export default function RootLayout({

@@ -3,51 +3,56 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 
 const navLinks = [
-  { name: 'Experience', href: '#about' },
+  { name: 'About', href: '#about' },
+  { name: 'Experience', href: '#experience' },
   { name: 'Projects', href: '#projects' },
   { name: 'Contact', href: '#contact' },
 ]
 
 const skillGroups = [
   {
-    title: 'Programming',
+    title: 'Programming Languages',
     skills: [
       { name: 'Python', icon: '🐍' },
-      { name: 'R', icon: '📊' },
-      { name: 'SQL', icon: '🗄️' },
+      { name: 'JavaScript', icon: '⚡' },
       { name: 'Java', icon: '☕' },
+      { name: 'C', icon: '⚙️' },
+      { name: 'SQL', icon: '🗄️' },
     ],
   },
   {
-    title: 'Data & Analytics',
+    title: 'Frameworks & Libraries',
     skills: [
-      { name: 'Pandas', icon: '🧮' },
-      { name: 'NumPy', icon: '📐' },
-      { name: 'scikit-learn', icon: '🤖' },
-      { name: 'Tableau', icon: '📈' },
-      { name: 'Power BI', icon: '📊' },
-      { name: 'Excel', icon: '📗' },
-      { name: 'Data Cleaning', icon: '🧹' },
-      { name: 'ETL', icon: '🔄' },
+      { name: 'React', icon: '⚛️' },
+      { name: 'Node.js', icon: '🟢' },
+      { name: 'Flask', icon: '🌶️' },
+      { name: 'FastAPI', icon: '🚀' },
+      { name: 'PyTorch', icon: '🔥' },
+      { name: 'TensorFlow', icon: '🧠' },
+      { name: 'Pandas', icon: '🐼' },
+      { name: 'NumPy', icon: '🔢' },
     ],
   },
   {
-    title: 'Visualization & Web',
+    title: 'Cloud & DevOps',
     skills: [
-      { name: 'Matplotlib', icon: '📊' },
-      { name: 'Seaborn', icon: '🌊' },
-      { name: 'ggplot2', icon: '🎨' },
-      { name: 'APIs', icon: '🔗' },
-      { name: 'Web Scraping', icon: '🕸️' },
+      { name: 'AWS', icon: '☁️' },
+      { name: 'Google Cloud', icon: '🌩️' },
+      { name: 'Docker', icon: '🐳' },
+      { name: 'Kubernetes', icon: '⚓' },
+      { name: 'GitHub Actions', icon: '🔄' },
+      { name: 'CI/CD', icon: '🚀' },
     ],
   },
   {
-    title: 'Other',
+    title: 'Databases & Tools',
     skills: [
-      { name: 'Git & GitHub', icon: '🔧' },
-      { name: 'Teamwork', icon: '🤝' },
-      { name: 'Communication', icon: '💬' },
-      { name: 'Problem Solving', icon: '🧠' },
+      { name: 'MongoDB', icon: '🍃' },
+      { name: 'PostgreSQL', icon: '🐘' },
+      { name: 'Redis', icon: '🔴' },
+      { name: 'Firebase', icon: '🔥' },
+      { name: 'Git', icon: '📚' },
+      { name: 'System Design', icon: '🏗️' },
     ],
   },
 ]
@@ -86,16 +91,105 @@ export default function Home() {
         >
           <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6 text-white">
             I&apos;m <span className="text-blue-400">Ethan Zhang</span>.<br />
-            <span className="text-4xl md:text-5xl font-bold text-blue-200">Data Analyst &amp; Developer</span>
+            <span className="text-4xl md:text-5xl font-bold text-blue-200">Software Engineer</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
-            UC Berkeley student majoring in Computer Science &amp; Applied Math. Passionate about leveraging data to drive impactful decisions, with hands-on experience in data analysis, machine learning, and software development. Seeking data analyst opportunities to apply my technical expertise and curiosity to solve real-world problems.
+            UC Berkeley Computer Science &amp; Applied Mathematics student with 3+ years of full-stack development experience. Passionate about building scalable systems, RESTful APIs, and distributed architectures. Seeking software engineering opportunities to apply my expertise in Python, React, cloud technologies, and system design to solve complex technical challenges.
           </p>
           <div className="flex gap-6 mt-4">
             <a href="#projects" className="px-8 py-3 bg-blue-500 text-white rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 transition-colors">View Projects</a>
             <a href="#contact" className="px-8 py-3 border-2 border-blue-400 text-blue-400 rounded-lg text-lg font-semibold hover:bg-blue-900/40 transition-colors">Contact Me</a>
           </div>
         </motion.div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className="py-20 bg-gradient-to-br from-gray-950 via-blue-950 to-gray-900">
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-bold text-center mb-12 text-blue-300">Professional Experience</h2>
+          <div className="space-y-8">
+            {/* Google Experience */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="bg-black/40 rounded-2xl shadow-xl p-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 className="text-xl font-bold text-blue-300">Senior Consultant (Backend Engineer)</h3>
+                <span className="text-blue-400 font-medium">Aug 2025 - Present</span>
+              </div>
+              <p className="text-blue-200 font-medium mb-3">Business & Software at Berkeley — Client: Google | Mountain View, CA</p>
+              <ul className="list-disc list-inside text-blue-100 space-y-2">
+                <li>Developed backend dashboard for Google Cloud PMs to track idle resources across 50+ projects, cutting infrastructure waste by ~18%</li>
+                <li>Engineered data aggregation and filtering pipelines using Python, Firebase, and Cloud Functions; exposed RESTful APIs for efficient data retrieval</li>
+                <li>Collaborated with Google PMs to translate feature requirements into testable backend modules, delivering 6+ MVPs across 4 agile sprints with CI/CD, 90% test coverage</li>
+              </ul>
+            </motion.div>
+
+            {/* Oratora Experience */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-black/40 rounded-2xl shadow-xl p-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 className="text-xl font-bold text-blue-300">Software Engineer Intern</h3>
+                <span className="text-blue-400 font-medium">July 2025 - Present</span>
+              </div>
+              <p className="text-blue-200 font-medium mb-3">Oratora | Berkeley, CA</p>
+              <ul className="list-disc list-inside text-blue-100 space-y-2">
+                <li>Built keystroke-based cheat detection system using behavioral telemetry to identify AI-assisted and copy-paste behavior</li>
+                <li>Engineered feature pipeline (30+ signals) from keystroke data; found entropy/paste-ratio patterns in 92% of cheating cases</li>
+                <li>Deployed FastAPI inference API (&lt;100ms latency) with SHAP-based explainability; achieved 91% precision on validation</li>
+              </ul>
+            </motion.div>
+
+            {/* Lumo Experience */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="bg-black/40 rounded-2xl shadow-xl p-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 className="text-xl font-bold text-blue-300">Lead Software Engineer</h3>
+                <span className="text-blue-400 font-medium">March 2025 - Present</span>
+              </div>
+              <p className="text-blue-200 font-medium mb-3">Lumo | Berkeley, CA</p>
+              <ul className="list-disc list-inside text-blue-100 space-y-2">
+                <li>Shipped AI grocery app used by 800+ beta testers; reduced average in-store time by 23% with personalized meal planning</li>
+                <li>Integrated GPT-4 assistant for real-time suggestions, nutrition tracking, and conversational shopping features</li>
+                <li>Architected modular system with GitHub Actions CI/CD and high test coverage, enabling parallel dev across cart, chatbot, and calendar modules</li>
+              </ul>
+            </motion.div>
+
+            {/* Law Office Experience */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.3 }}
+              viewport={{ once: true }}
+              className="bg-black/40 rounded-2xl shadow-xl p-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 className="text-xl font-bold text-blue-300">Software Engineer Intern</h3>
+                <span className="text-blue-400 font-medium">May 2025 - July 2025</span>
+              </div>
+              <p className="text-blue-200 font-medium mb-3">Law Offices of Vaughan de Kirby A.P.C. | San Francisco, CA</p>
+              <ul className="list-disc list-inside text-blue-100 space-y-2">
+                <li>Built full-stack bilingual platform with green card screener, RAG-based multilingual chatbot, and predictive case tracker</li>
+                <li>Created multilingual React screener and RAG chatbot (LangChain, ChromaDB); enabled 1,000+ self-service screenings</li>
+                <li>Constructed visa case tracker with ETA engine (MAE: 4.6 days); improved update accuracy and cut inquiry tickets by 30%</li>
+                <li>Assembled Flask backend with Firebase, MongoDB, and JWT auth; deployed to Vercel/Render with accessibility-first UI</li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
       </section>
 
       {/* About & Skills Section - Two Column Layout */}
@@ -111,13 +205,13 @@ export default function Home() {
           >
             <h2 className="text-3xl font-bold mb-2 text-blue-300">About Me</h2>
             <p className="text-lg text-blue-100">
-              Hi! I&apos;m Ethan, a passionate data analyst and developer currently studying Computer Science and Applied Math at UC Berkeley. I thrive on solving complex problems and transforming data into actionable insights. My interests include data science, machine learning, and building tools that make a difference. I love collaborating with others and am always eager to learn something new.
+              Hi! I&apos;m Ethan, a passionate software engineer currently studying Computer Science and Applied Math at UC Berkeley. I specialize in full-stack development, building scalable systems, and creating impactful software solutions. With 3+ years of hands-on experience in Python, React, cloud technologies, and distributed systems, I thrive on solving complex technical challenges and delivering high-quality software products.
             </p>
             <ul className="list-disc list-inside text-blue-200 text-base mt-2">
-              <li>Driven by curiosity and a love for data</li>
-              <li>Experienced in both research and real-world projects</li>
-              <li>Strong communicator and team player</li>
-              <li>Open to data analyst and tech opportunities</li>
+              <li>Experienced in full-stack development and system architecture</li>
+              <li>Proven track record with Google, Oratora, and Lumo</li>
+              <li>Strong background in machine learning and AI integration</li>
+              <li>Seeking software engineering opportunities at top tech companies</li>
             </ul>
           </motion.div>
           {/* Skills */}
@@ -149,17 +243,83 @@ export default function Home() {
 
       {/* Projects Section */}
       <section id="projects" className="py-20 bg-gradient-to-br from-blue-950 via-gray-900 to-blue-900">
-        <div className="container mx-auto px-4 max-w-3xl">
-          <h2 className="text-3xl font-bold text-center mb-12 text-blue-300">Projects</h2>
-          <div className="flex flex-col items-center gap-6">
-            <a
-              href="https://github.com/ethanzhanghello"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-blue-400 underline text-lg font-medium hover:text-blue-200"
+        <div className="container mx-auto px-4 max-w-6xl">
+          <h2 className="text-3xl font-bold text-center mb-12 text-blue-300">Featured Projects</h2>
+          <div className="space-y-8">
+            {/* Golden Bear Bets */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7 }}
+              viewport={{ once: true }}
+              className="bg-black/40 rounded-2xl shadow-xl p-8"
             >
-              View all my projects on GitHub
-            </a>
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 className="text-xl font-bold text-blue-300">Golden Bear Bets</h3>
+                <span className="text-blue-400 font-medium">Aug 2024 - Dec 2024</span>
+              </div>
+              <p className="text-blue-200 font-medium mb-3">Full Stack Engineer (Project Manager) | Berkeley, CA</p>
+              <ul className="list-disc list-inside text-blue-100 space-y-2 mb-4">
+                <li>Led 18-person team to build scalable LLM sports analytics platform predicting player performance from structured stats and 3K+ reports</li>
+                <li>Built ML pipelines processing 1.2M+ data points/week with live ingestion, feature extraction, and inference via REST APIs</li>
+                <li>Deployed full-stack Flask + React web app on AWS with Kubernetes, autoscaling to serve 12K+ user predictions during NBA playoffs at 88.4% accuracy and &lt;250ms latency</li>
+              </ul>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Python</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">React</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Flask</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">AWS</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Kubernetes</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Machine Learning</span>
+              </div>
+            </motion.div>
+
+            {/* Music Recommender */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="bg-black/40 rounded-2xl shadow-xl p-8"
+            >
+              <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                <h3 className="text-xl font-bold text-blue-300">Cross-Platform Music Recommender</h3>
+                <span className="text-blue-400 font-medium">April 2025</span>
+              </div>
+              <p className="text-blue-200 font-medium mb-3">SMCCD Intercollegiate Hackathon — 1st Place, Machine Learning Track | San Mateo, CA</p>
+              <ul className="list-disc list-inside text-blue-100 space-y-2 mb-4">
+                <li>Created music recommender aggregating 3M+ Spotify, Apple Music, and YouTube plays to predict cross-platform taste</li>
+                <li>Built cross-platform music recommender with drag-and-drop UI and transformer-based audio embeddings (Flask + VectorDB)</li>
+                <li>Improved music discovery by 34% (MAP@20: 0.89) across Spotify, Apple Music, and YouTube</li>
+                <li>Awarded $1,000 Grand Prize for Best Overall Project among 100+ competing teams</li>
+              </ul>
+              <div className="flex flex-wrap gap-2">
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Python</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Flask</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">VectorDB</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Machine Learning</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">APIs</span>
+              </div>
+            </motion.div>
+
+            {/* GitHub Link */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="text-center"
+            >
+              <a
+                href="https://github.com/ethanzhanghello"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-8 py-3 bg-blue-500 text-white rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 transition-colors"
+              >
+                View all projects on GitHub
+                <span>→</span>
+              </a>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -168,9 +328,22 @@ export default function Home() {
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-950 via-blue-950 to-gray-900">
         <div className="container mx-auto px-4 max-w-3xl">
           <h2 className="text-3xl font-bold text-center mb-12 text-blue-300">Contact</h2>
-          <div className="flex flex-col items-center gap-4 text-lg">
-            <span>📞 <a href="tel:6505183763" className="hover:underline">(650) 518-3763</a></span>
-            <span>✉️ <a href="mailto:ezhang0606@gmail.com" className="hover:underline">ezhang0606@gmail.com</a></span>
+          <div className="flex flex-col items-center gap-6 text-lg">
+            <div className="flex flex-col md:flex-row items-center gap-8">
+              <span>📞 <a href="tel:6505183763" className="hover:underline text-blue-200">(650) 518-3763</a></span>
+              <span>✉️ <a href="mailto:ezhang06@berkeley.edu" className="hover:underline text-blue-200">ezhang06@berkeley.edu</a></span>
+            </div>
+            <div className="flex gap-6">
+              <a href="https://linkedin.com/in/ethan-zhang" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-200 transition-colors">
+                LinkedIn
+              </a>
+              <a href="https://github.com/ethanzhanghello" target="_blank" rel="noopener noreferrer" className="text-blue-400 hover:text-blue-200 transition-colors">
+                GitHub
+              </a>
+            </div>
+            <div className="text-center text-blue-200 text-sm max-w-2xl">
+              <p>Open to software engineering opportunities at innovative companies. Passionate about building scalable systems, working with cutting-edge technologies, and contributing to impactful projects.</p>
+            </div>
           </div>
         </div>
       </section>
