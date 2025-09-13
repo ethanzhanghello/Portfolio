@@ -122,9 +122,9 @@ export default function Home() {
               </div>
               <p className="text-blue-200 font-medium mb-3">Business & Software at Berkeley — Client: Google | Mountain View, CA</p>
               <ul className="list-disc list-inside text-blue-100 space-y-2">
-                <li>Built backend dashboard for Google Cloud PMs to track idle resources across 50+ projects, cutting infra waste ~18%</li>
-                <li>Developed aggregation and filtering pipelines (Python, Firebase, Cloud Functions); exposed REST APIs for data retrieval</li>
-                <li>Collaborated with Google PMs to translate feature requirements into testable backend modules, delivering 6+ MVPs across 4 agile sprints with CI/CD, 90% test coverage, and clean handoff to frontend</li>
+                <li>Developed backend dashboard for Google Cloud PMs to track idle resources across 50+ projects, reducing infrastructure waste by ~18%</li>
+                <li>Engineered data aggregation and filtering pipelines using Python, Firebase, and Cloud Functions; exposed RESTful APIs for efficient data retrieval</li>
+                <li>Collaborated with Google PMs to translate feature requirements into testable backend modules, delivering 6+ MVPs across 4 agile sprints with CI/CD, 90% test coverage</li>
               </ul>
             </motion.div>
 
@@ -142,7 +142,7 @@ export default function Home() {
               </div>
               <p className="text-blue-200 font-medium mb-3">Oratora | Berkeley, CA</p>
               <ul className="list-disc list-inside text-blue-100 space-y-2">
-                <li>Built a keystroke-based cheat detection system using behavioral telemetry to identify AI-assisted and copy-paste behavior</li>
+                <li>Built keystroke-based cheat detection system using behavioral telemetry to identify AI-assisted and copy-paste behavior</li>
                 <li>Engineered feature pipeline (30+ signals) from keystroke data; found entropy/paste-ratio patterns in 92% of cheating cases</li>
                 <li>Deployed FastAPI inference API (&lt;100ms latency) with SHAP-based explainability; achieved 91% precision on validation</li>
               </ul>
