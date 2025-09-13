@@ -94,7 +94,7 @@ export default function Home() {
             <span className="text-4xl md:text-5xl font-bold text-blue-200">Software Engineer</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
-            UC Berkeley Computer Science &amp; Applied Mathematics student with 3+ years of full-stack development experience. Passionate about building scalable systems, RESTful APIs, and distributed architectures. Seeking software engineering opportunities to apply my expertise in Python, React, cloud technologies, and system design to solve complex technical challenges.
+            UC Berkeley Computer Science &amp; Applied Mathematics student with 4+ years of full-stack development experience. Passionate about building scalable systems, RESTful APIs, and distributed architectures. Seeking software engineering opportunities to apply my expertise in multiple programming languages, modern frameworks, cloud technologies, and system design to solve complex technical challenges.
           </p>
           <div className="flex gap-6 mt-4">
             <a href="#projects" className="px-8 py-3 bg-blue-500 text-white rounded-lg text-lg font-semibold shadow-lg hover:bg-blue-600 transition-colors">View Projects</a>
@@ -205,7 +205,7 @@ export default function Home() {
           >
             <h2 className="text-3xl font-bold mb-2 text-blue-300">About Me</h2>
             <p className="text-lg text-blue-100">
-              Hi! I&apos;m Ethan, a passionate software engineer currently studying Computer Science and Applied Math at UC Berkeley. I specialize in full-stack development, building scalable systems, and creating impactful software solutions. With 3+ years of hands-on experience in Python, React, cloud technologies, and distributed systems, I thrive on solving complex technical challenges and delivering high-quality software products.
+              Hi! I&apos;m Ethan, a passionate software engineer currently studying Computer Science and Applied Math at UC Berkeley. I specialize in full-stack development, building scalable systems, and creating impactful software solutions. With 4+ years of hands-on experience across multiple programming languages, modern frameworks, cloud technologies, and distributed systems, I thrive on solving complex technical challenges and delivering high-quality software products.
             </p>
             <ul className="list-disc list-inside text-blue-200 text-base mt-2">
               <li>Experienced in full-stack development and system architecture</li>
