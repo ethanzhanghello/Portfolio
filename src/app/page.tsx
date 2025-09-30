@@ -122,7 +122,7 @@ export default function Home() {
               </div>
               <p className="text-blue-200 font-medium mb-3">Equivalence Systems, LLC / CAHL Lab, UC Berkeley | Berkeley, CA</p>
               <p className="text-blue-100 leading-relaxed">
-                Built and deployed an NLP pipeline using Python, HuggingFace, spaCy, and GCP with CAHL Lab researchers to process 36M+ course equivalency pairs, automating syllabus comparison and reducing review time by 90%. Developed OCR transcript parser with Tesseract, PyPDF2, and Pandas, converted 10K+ PDFs into JSON with &lt;5s latency, integrated into backend APIs with CI/CD and &gt;90% test coverage for reliable evaluations across CUNY, SUNY, UC, CSU. Delivered a full-stack analytics dashboard built in React, Flask, and Firebase, adopted by 100+ universities, and introduced a novel coverage metric that improved trust, transparency, and policy alignment in credit transfer.
+                I collaborated with CAHL Lab researchers to build and deploy a sophisticated NLP pipeline using Python, HuggingFace, and spaCy on Google Cloud Platform that processes over 36 million course equivalency pairs. This system automates syllabus comparison and has reduced manual review time by an impressive 90%. Additionally, I developed an OCR transcript parser leveraging Tesseract, PyPDF2, and Pandas that converts over 10,000 PDFs into structured JSON format with sub-5-second latency. This parser is fully integrated into our backend APIs with comprehensive CI/CD pipelines and maintains over 90% test coverage, ensuring reliable evaluations across major university systems including CUNY, SUNY, UC, and CSU. I also delivered a full-stack analytics dashboard built with React, Flask, and Firebase that has been adopted by more than 100 universities nationwide. Through this work, I introduced a novel coverage metric that significantly improved trust, transparency, and policy alignment in credit transfer processes.
               </p>
             </motion.div>
 
@@ -250,11 +250,9 @@ export default function Home() {
                 <span className="text-blue-400 font-medium">August 2024 - December 2024</span>
               </div>
               <p className="text-blue-200 font-medium mb-3">Full Stack Engineer (Project Manager) | Berkeley, CA</p>
-              <ul className="list-disc list-inside text-blue-100 space-y-2 mb-4">
-                <li>Led an 11-person team to build an Autonomous Red-Team Agent, an AI-driven distributed systems platform in Python and FastAPI, automating data ingestion, vulnerability analysis, and reporting for scalable, real-time applications in a sandboxed environment</li>
-                <li>Built pipelines handling 200K+ events/week with graph queries, orchestration, and real-time streaming for scalable analysis</li>
-                <li>Deployed a Flask/React + TypeScript app on AWS with Kubernetes and CI/CD, delivering millisecond-level latency, automated reporting, and production-grade observability</li>
-              </ul>
+              <p className="text-blue-100 leading-relaxed">
+                I led an 11-person team to build an Autonomous Red-Team Agent, an innovative AI-driven distributed systems platform developed in Python and FastAPI that automates data ingestion, vulnerability analysis, and reporting for scalable, real-time applications in a sandboxed environment. Our team constructed robust pipelines that handle over 200,000 events per week using advanced graph queries, orchestration, and real-time streaming capabilities for comprehensive scalable analysis. I successfully deployed a full-stack Flask and React application with TypeScript on AWS using Kubernetes and CI/CD pipelines, achieving millisecond-level latency while delivering automated reporting and production-grade observability throughout the system.
+              </p>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Python</span>
                 <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">React</span>
