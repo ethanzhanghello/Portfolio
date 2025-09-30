@@ -108,7 +108,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-12 text-blue-300">Professional Experience</h2>
           <div className="space-y-8">
-            {/* Google Experience */}
+            {/* Equivalence Systems Experience */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -117,12 +117,12 @@ export default function Home() {
               className="bg-black/40 rounded-2xl shadow-xl p-8"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 className="text-xl font-bold text-blue-300">Senior Consultant (Backend Engineer)</h3>
+                <h3 className="text-xl font-bold text-blue-300">ML Research Engineer (Backend)</h3>
                 <span className="text-blue-400 font-medium">August 2025 - Present</span>
               </div>
-              <p className="text-blue-200 font-medium mb-3">Business & Software at Berkeley — Client: Google | Mountain View, CA</p>
+              <p className="text-blue-200 font-medium mb-3">Equivalence Systems, LLC / CAHL Lab, UC Berkeley | Berkeley, CA</p>
               <p className="text-blue-100 leading-relaxed">
-                At Google, I contributed to cutting-edge agentic AI research by building benchmarking pipelines that stress-tested over 20 tools for latency, scalability, and fault tolerance using Python and Firebase harnesses. This work reduced manual validation effort by 25% and provided critical insights into AI system performance. Collaborating with Google Cloud Product Managers, I helped design a real-time monitoring system that tracks over 10,000 resources across 50+ projects, with optimized queries cutting infrastructure waste by 18%. The solution also included high-throughput REST APIs and backend modules using Python and Firebase Cloud Functions, processing over 10,000 weekly requests with sub-200ms response times, all backed by 90% unit test coverage and robust CI/CD pipelines.
+                Built and deployed an NLP pipeline using Python, HuggingFace, spaCy, and GCP with CAHL Lab researchers to process 36M+ course equivalency pairs, automating syllabus comparison and reducing review time by 90%. Developed OCR transcript parser with Tesseract, PyPDF2, and Pandas, converted 10K+ PDFs into JSON with &lt;5s latency, integrated into backend APIs with CI/CD and &gt;90% test coverage for reliable evaluations across CUNY, SUNY, UC, CSU. Delivered a full-stack analytics dashboard built in React, Flask, and Firebase, adopted by 100+ universities, and introduced a novel coverage metric that improved trust, transparency, and policy alignment in credit transfer.
               </p>
             </motion.div>
 
@@ -237,7 +237,7 @@ export default function Home() {
         <div className="container mx-auto px-4 max-w-6xl">
           <h2 className="text-3xl font-bold text-center mb-12 text-blue-300">Featured Projects</h2>
           <div className="space-y-8">
-            {/* Golden Bear Bets */}
+            {/* Open Project @ Berkeley */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -246,22 +246,23 @@ export default function Home() {
               className="bg-black/40 rounded-2xl shadow-xl p-8"
             >
               <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
-                <h3 className="text-xl font-bold text-blue-300">Golden Bear Bets</h3>
-                <span className="text-blue-400 font-medium">Aug 2024 - Dec 2024</span>
+                <h3 className="text-xl font-bold text-blue-300">Open Project @ Berkeley</h3>
+                <span className="text-blue-400 font-medium">August 2024 - December 2024</span>
               </div>
               <p className="text-blue-200 font-medium mb-3">Full Stack Engineer (Project Manager) | Berkeley, CA</p>
               <ul className="list-disc list-inside text-blue-100 space-y-2 mb-4">
-                <li>Led 18-person team to build scalable LLM sports analytics platform predicting player performance from structured stats and 3K+ reports</li>
-                <li>Built ML pipelines processing 1.2M+ data points/week with live ingestion, feature extraction, and inference via REST APIs</li>
-                <li>Deployed full-stack Flask + React web app on AWS with Kubernetes, autoscaling to serve 12K+ user predictions during NBA playoffs at 88.4% accuracy and &lt;250ms latency</li>
+                <li>Led an 11-person team to build an Autonomous Red-Team Agent, an AI-driven distributed systems platform in Python and FastAPI, automating data ingestion, vulnerability analysis, and reporting for scalable, real-time applications in a sandboxed environment</li>
+                <li>Built pipelines handling 200K+ events/week with graph queries, orchestration, and real-time streaming for scalable analysis</li>
+                <li>Deployed a Flask/React + TypeScript app on AWS with Kubernetes and CI/CD, delivering millisecond-level latency, automated reporting, and production-grade observability</li>
               </ul>
               <div className="flex flex-wrap gap-2">
                 <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Python</span>
                 <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">React</span>
                 <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Flask</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">FastAPI</span>
                 <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">AWS</span>
                 <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Kubernetes</span>
-                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">Machine Learning</span>
+                <span className="px-3 py-1 bg-blue-800/70 text-blue-100 rounded-full text-sm">TypeScript</span>
               </div>
             </motion.div>
 
