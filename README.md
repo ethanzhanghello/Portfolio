@@ -1,36 +1,95 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ethanzhang.dev - personal portfolio
 
-## Getting Started
+Single-page portfolio for Ethan Zhang - UC Berkeley CS + Applied Math '28,
+built to put shipped work and measurable impact front and center.
 
-First, run the development server:
+**Stack:** Next.js (App Router) · TypeScript · Tailwind CSS v4 · GSAP +
+ScrollTrigger · Lenis (smooth scroll) · OGL (WebGL hero).
+Fully static - no backend, no client data fetching.
+
+## Local development
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Other scripts:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build      # production build (static)
+npm run start      # serve the production build
+npm run lint       # eslint
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Editing content
 
-## Learn More
+All copy - roles, stories, metrics, projects, skills, links - lives in one
+typed file: **`src/data/content.ts`**. Components only render what it exports,
+so you never need to touch a component to update the resume story.
 
-To learn more about Next.js, take a look at the following resources:
+Two conventions inside that file:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Wrap a phrase in `**double asterisks**` inside a story or outcome to render
+  it highlighted in the accent color.
+- Each role has a `stats` array - the big monospace numbers shown next to it.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Placeholders to fill in
 
-## Deploy on Vercel
+| What | Where |
+| --- | --- |
+| Resume PDF | Drop your file at `public/resume.pdf` (linked as "View resume") |
+| Deployed domain | `site.url` in `src/data/content.ts` (used by sitemap + Open Graph) |
+| Project demo/repo links | `links` arrays on each project in `src/data/content.ts` |
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Project structure
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+src/
+  data/content.ts        # single source of truth for all copy
+  lib/motion.ts          # GSAP/ScrollTrigger setup, reveal constants, Lenis
+  app/
+    layout.tsx           # fonts (next/font), metadata, theme init script
+    page.tsx             # section assembly
+    globals.css          # theme tokens (light/dark) + Tailwind setup
+    opengraph-image.tsx  # OG/Twitter card, generated at build time
+    sitemap.ts, robots.ts, icon.svg
+  components/
+    motion/              # SmoothScroll (Lenis), Cursor, Magnetic, Parallax
+    HeroCanvas.tsx       # OGL/WebGL shader backdrop (code-split)
+    ...                  # Nav, Hero, Experience, SelectedWork, Skills,
+                         # About, Footer, Reveal, Stat, shared pieces
+```
+
+Design notes: dark mode is the default with a persisted light-mode toggle
+(`ThemeToggle` flips a `.dark` class set pre-hydration to avoid a flash).
+
+The motion system has two layers: GSAP + ScrollTrigger orchestrate all
+sequencing and scroll choreography (one reveal convention site-wide, count-up
+metrics, drawn dividers, scrubbed parallax), while an OGL/WebGL shader renders
+the cursor-reactive hero backdrop on the GPU. Lenis provides inertia scrolling,
+and a custom cursor + magnetic elements round out the micro-interactions. Only
+`transform` and `opacity` are ever animated on DOM elements.
+
+Scroll is authored: a top progress bar scrubs with the page, the hero hands
+off with a scrubbed lift/blur/fade, and on desktop the experience section
+plays as a pinned scroll story - a sticky rail crossfades the active role and
+draws a progress line while the cards scroll by, active card in focus. The
+story is JS-gated (`.story-on`), so mobile, reduced motion, and no-JS read
+the same content as clean stacked cards.
+
+Guardrails: everything collapses under `prefers-reduced-motion` (content is
+server-rendered visible, so no-JS users see the full site); the WebGL layer is
+code-split, capped at 2× pixel ratio, paused offscreen, skipped on mobile, and
+falls back to a static CSS gradient if a context can't be created.
+
+## Deploying to Vercel
+
+1. Push this repo to GitHub.
+2. [vercel.com/new](https://vercel.com/new) → import the repo. Vercel detects
+   Next.js; the defaults are correct - no env vars needed.
+3. Every push to `main` deploys automatically; PRs get preview URLs.
+4. After the first deploy, set `site.url` in `src/data/content.ts` to the
+   production domain so the sitemap and social cards point at the right place.
+
+Or from the CLI: `npx vercel` (preview) / `npx vercel --prod`.
