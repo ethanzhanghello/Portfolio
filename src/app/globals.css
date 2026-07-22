@@ -1,26 +1,164 @@
 @import "tailwindcss";
 
+/* Class-based dark mode: `.dark` on <html> wins over the OS preference,
+   so the toggle works predictably. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Theme tokens ---------- */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Light theme */
+  --bg: #fbfbfa;
+  --surface: #f2f4f4;
+  --fg: #101820;
+  --muted: #55626e;
+  --line: #e3e7ea;
+  --accent: #0d7c6f;
+  --accent-soft: rgba(13, 124, 111, 0.09);
 }
 
+.dark {
+  /* Dark theme (default) */
+  --bg: #0a0f14;
+  --surface: #0f161d;
+  --fg: #e7edf2;
+  --muted: #93a1ae;
+  --line: #1c2632;
+  --accent: #2dd4bf;
+  --accent-soft: rgba(45, 212, 191, 0.08);
+}
+
+/* Map tokens into Tailwind utilities (bg-bg, text-fg, border-line, …). */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, "SF Mono", monospace;
+
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-fg: var(--fg);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* ---------- Base ---------- */
+
+html {
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
+}
+
+/* Smooth anchor scrolling, but only when the user allows motion.
+   Disabled while Lenis is driving the scroll (it adds .lenis). */
+@media (prefers-reduced-motion: no-preference) {
+  html:not(.lenis) {
+    scroll-behavior: smooth;
   }
 }
 
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Anchored sections land below the sticky nav. */
+section[id] {
+  scroll-margin-top: 5.5rem;
+}
+
+::selection {
+  background-color: var(--accent);
+  color: var(--bg);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+/* ---------- Motion system ---------- */
+
+/* Custom cursor (mounted only on fine pointers with motion allowed). */
+.custom-cursor,
+.custom-cursor a,
+.custom-cursor button,
+.custom-cursor [data-cursor] {
+  cursor: none;
+}
+
+.cursor-dot,
+.cursor-ring {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  border-radius: 9999px;
+  pointer-events: none;
+  opacity: 0;
+}
+
+.cursor-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+}
+
+.cursor-ring {
+  width: 34px;
+  height: 34px;
+  background: #fff;
+  mix-blend-mode: difference;
+}
+
+/* Springy hover for skill pills - transform only, so it stays cheap. */
+.springy {
+  transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.25s ease, color 0.25s ease;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .springy {
+    transition: none;
+  }
+}
+
+/* Experience scroll story: the sticky rail only exists once JS confirms
+   desktop + motion (`.story-on`); until then - and for mobile, reduced
+   motion, and no-JS - the roles read as clean stacked cards with their
+   own meta. */
+.experience-rail {
+  display: none;
+}
+
+.story-on .experience-rail {
+  display: block;
+}
+
+.story-on .role-meta {
+  display: none;
+}
+
+/* Static hero backdrop: the base the shader composites over, and the
+   fallback when WebGL is unavailable, on mobile, or motion is reduced. */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 55% 60% at 70% 25%, var(--accent-soft), transparent 70%),
+    radial-gradient(ellipse 45% 50% at 20% 75%, var(--accent-soft), transparent 70%);
 }
